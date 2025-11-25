@@ -33,7 +33,7 @@ async function bootstrap() {
     next();
   });
 
-  const port = process.env.PORT || 3003;
+  const port = process.env.PORT || 3004;
   await app.listen(port);
   logger.log(`Gateway listening on port ${port}`);
 }
