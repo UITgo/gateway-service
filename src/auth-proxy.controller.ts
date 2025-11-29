@@ -12,7 +12,7 @@ export class AuthProxyController {
   async login(@Body() body: any) {
     const base = process.env.AUTH_BASE_URL || 'http://auth-service:3000';
     const res = await firstValueFrom(
-      this.http.post(base + '/auth/login', body),
+      this.http.post(base + '/v1/auth/login', body),
     );
     return res.data;
   }
