@@ -7,6 +7,7 @@ import { AuthProxyController } from './auth-proxy.controller';
 import { UsersProxyController } from './users-proxy.controller';
 import { TripsProxyController } from './trips-proxy.controller';
 import { DriversProxyController } from './drivers-proxy.controller';
+import { HealthController } from './health.controller';
 import { JwtStrategy } from './jwt.strategy';
 import { JwtAuthGuard, Public } from './jwt-auth.guard';
 import { APP_GUARD } from '@nestjs/core';
@@ -24,6 +25,7 @@ import { APP_GUARD } from '@nestjs/core';
     }),
   ],
   controllers: [
+    HealthController,
     AuthProxyController,
     UsersProxyController,
     TripsProxyController,
